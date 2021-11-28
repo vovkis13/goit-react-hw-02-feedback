@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions.jsx";
+import Section from "./components/Section/Section.jsx";
+import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
 import Statistics from "./components/Statistics/Statistics";
 
 export default class App extends Component {
@@ -23,15 +24,19 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <FeedbackOptions
-          options={this.state}
-          onLeaveFeedback={this.incrementValue}
-        />
-        <Statistics
-          options={this.state}
-          total={this.countTotalFeedback}
-          positivePercentage={this.countPositiveFeedbackPercentage}
-        />
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.incrementValue}
+          />
+        </Section>
+        <Section title="Statistics">
+          <Statistics
+            options={this.state}
+            total={this.countTotalFeedback}
+            positivePercentage={this.countPositiveFeedbackPercentage}
+          />
+        </Section>
       </>
     );
   }
