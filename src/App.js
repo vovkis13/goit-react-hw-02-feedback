@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Section from "./components/Section/Section.jsx";
-import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
-import Statistics from "./components/Statistics/Statistics";
+import Section from "./components/Section";
+import FeedbackOptions from "./components/FeedbackOptions";
+import Statistics from "./components/Statistics";
 
 export default class App extends Component {
   state = {
@@ -11,8 +11,8 @@ export default class App extends Component {
   };
 
   incrementValue = (e) => {
-    const option = e.target.innerHTML;
-    this.setState((prevState) => ({ [option]: prevState[option] + 1 }));
+    const optionName = e.target.innerHTML;
+    this.setState((prevState) => ({ [optionName]: prevState[optionName] + 1 }));
   };
 
   countTotalFeedback = () =>

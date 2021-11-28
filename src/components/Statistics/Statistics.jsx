@@ -16,7 +16,7 @@ export default function Statistics({ options, total, positivePercentage }) {
   );
 }
 Statistics.propTypes = {
-  options: PropTypes.object,
-  total: PropTypes.func,
-  positive: PropTypes.func,
+  options: PropTypes.object.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 };

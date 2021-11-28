@@ -11,6 +11,6 @@ export default function Button({ title, incrementValue }) {
 }
 
 Button.propTypes = {
-  title: PropTypes.string,
-  incrementValue: PropTypes.func,
+  title: PropTypes.string.isRequired,
+  incrementValue: PropTypes.func.isRequired,
 };
