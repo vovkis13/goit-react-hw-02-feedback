@@ -1,3 +1,6 @@
-.value {
+.item {
+  margin-bottom: 10px;
+  padding: 0px 150px;
+  font-size: 18px;
   text-transform: capitalize;
 }

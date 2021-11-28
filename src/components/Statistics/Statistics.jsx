@@ -6,12 +6,12 @@ export default function Statistics({ options, total, positivePercentage }) {
   return (
     <div>
       {Object.entries(options).map((option) => (
-        <p className={s.value} key={option[0]}>
-          {option[0]}:{option[1]}
+        <p className={s.item} key={option[0]}>
+          {option[0]}: {option[1]}
         </p>
       ))}
-      <p>Total:{total()}</p>
-      <p>Positive feedback:{positivePercentage()}</p>
+      <p className={s.item}>Total: {total()}</p>
+      <p className={s.item}>Positive feedback: {positivePercentage() + "%"}</p>
     </div>
   );
 }
