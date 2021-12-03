@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Button from "../Button";
-import s from "./FeedbackOptions.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from '../Button';
+import s from './FeedbackOptions.module.css';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div className={s.buttons}>
-      {Object.keys(options).map((value) => (
+      {options.map(value => (
         <Button title={value} incrementValue={onLeaveFeedback} key={value} />
       ))}
     </div>
